@@ -518,3 +518,26 @@ a.card:hover { transform: translate(-3px, -3px); box-shadow: 7px 7px 0 var(--ink
 .case-prose td[align='right'], .case-prose th[align='right'] { text-align: right; white-space: nowrap; }
 .case-prose tr:last-child td { border-bottom: 0; }
 @media print { .case-badge, .topbar { display: none; } }
+
+/* ---------- Explored map ---------- */
+.map-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 12px; }
+.map-head .prose { margin: 0; }
+.map-score { font-family: 'Jersey 10', monospace; font-size: 22px; min-width: 200px; }
+.map-count { font-size: 44px; line-height: 1; color: var(--text); }
+.map-bar { height: 14px; border: 2px solid var(--ink); background: var(--surface); margin-top: 6px; box-shadow: 3px 3px 0 var(--ink); }
+.map-bar span { display: block; height: 100%; background: var(--mint); }
+.map-wrap { border: 2px solid var(--ink); background: var(--tone-soft); box-shadow: 5px 5px 0 var(--ink); padding: 16px 16px 8px; }
+.us-map { display: block; width: 100%; height: auto; }
+.us-map .state { fill: var(--surface); stroke: var(--text); stroke-opacity: 0.6; stroke-width: 1; stroke-linejoin: round; cursor: pointer; transition: fill 0.15s; }
+.us-map .state:hover, .us-map .state.focus { fill: var(--sun-soft); }
+.us-map .state.visited { fill: var(--mint); }
+.us-map .state.visited:hover, .us-map .state.visited.focus { fill: var(--sun); }
+.us-map .state.home { fill: var(--coral); }
+.us-map .home-label rect { fill: var(--ink); }
+.us-map .home-label text { fill: #fff; font-family: 'Jersey 10', monospace; font-size: 22px; }
+.us-map .home-label path { stroke: var(--ink); stroke-width: 3; fill: none; }
+.home-pin { pointer-events: none; }
+.map-info { font-size: 15px; min-height: 1.6em; margin: 6px 0 0; }
+.map-list { margin-top: 18px; }
+.map-list .pixel { vertical-align: -2px; }
+@media print { .no-print { display: none !important; } }

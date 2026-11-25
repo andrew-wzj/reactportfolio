@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { profile, about, experience, projects, skills, education } from './data/resume.js'
 import Pixel from './PixelArt.jsx'
+import TravelMap from './TravelMap.jsx'
 
 const SECTIONS = [
   ['about', 'About'],
@@ -8,6 +9,7 @@ const SECTIONS = [
   ['projects', 'Projects'],
   ['skills', 'Skills'],
   ['education', 'Education'],
+  ['map', 'Map'],
 ]
 
 export function useTheme() {
@@ -95,9 +97,9 @@ function Hero() {
   )
 }
 
-function Section({ id, title, icon, color = 'mint', children }) {
+export function Section({ id, title, icon, color = 'mint', className = '', children }) {
   return (
-    <section id={id} className={`section tone-${color}`}>
+    <section id={id} className={`section tone-${color} ${className}`}>
       <h2>
         {icon && <Pixel name={icon} size={4} className="h-icon" />}
         <span className="h-text">{title}</span>
@@ -242,6 +244,7 @@ export default function App() {
             </div>
           ))}
         </Section>
+        <TravelMap />
       </main>
       <footer className="footer">
         <div className="footer-sprites" aria-hidden="true">

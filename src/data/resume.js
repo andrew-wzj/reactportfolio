@@ -172,3 +172,9 @@ export const education = [
     dates: 'Dec 2024',
   },
 ]
+
+// States I have explored. Add a postal code here to light it up on the map.
+export const travel = {
+  home: { abbr: 'NH', place: 'Dublin, NH' },
+  visited: ['ME', 'NH', 'MA', 'CT', 'PA', 'UT'],
+}

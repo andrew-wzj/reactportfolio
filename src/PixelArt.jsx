@@ -18,6 +18,26 @@ const PALETTE = {
 }
 
 export const SPRITES = {
+  house: [
+    '....KK....',
+    '...KRRK...',
+    '..KRRRRK..',
+    '.KRRRRRRK.',
+    'KRRRRRRRRK',
+    '.KWWWWWWK.',
+    '.KWBWWNWK.',
+    '.KWWWWNWK.',
+    '.KKKKKKKK.',
+  ],
+  map: [
+    'KKKKKKKKKKKK',
+    'KGGGKYYYKBBK',
+    'KGDGKYYYKBBK',
+    'KGGGKYRYKBBK',
+    'KGGDKYYYKBBK',
+    'KGGGKYYYKBBK',
+    'KKKKKKKKKKKK',
+  ],
   gavel: [
     '..KKKKKKKK..',
     '.KNNNNNNNNK.',
