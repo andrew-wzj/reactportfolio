@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { profile, about, experience, projects, skills, education } from './data/resume.js'
+import Pixel from './PixelArt.jsx'
 
 const SECTIONS = [
   ['about', 'About'],
@@ -40,7 +41,7 @@ function Header() {
   const toggleTheme = useTheme()
   return (
     <header className="topbar">
-      <a href="#top" className="brand">ZW</a>
+      <a href="#top" className="brand"><Pixel name="star" size={2} /> ZW</a>
       <nav aria-label="Sections">
         {SECTIONS.map(([id, label]) => (
           <a key={id} href={`#${id}`}>{label}</a>
@@ -61,6 +62,12 @@ function Header() {
 function Hero() {
   return (
     <section className="hero" id="top">
+      <div className="sky" aria-hidden="true">
+        <Pixel name="sun" size={7} className="sun" />
+        <Pixel name="cloud" size={5} className="cloud c1" />
+        <Pixel name="cloud" size={4} className="cloud c2" />
+        <Pixel name="cloud" size={3} className="cloud c3" />
+      </div>
       <p className="eyebrow">{profile.role}</p>
       <h1>
         {profile.name} <span className="zh">{profile.nameZh}</span>
@@ -75,16 +82,26 @@ function Hero() {
             </a>
           </li>
         ))}
-        <li className="loc">{profile.location}</li>
+        <li className="loc">📍 {profile.location}</li>
       </ul>
+      <div className="buddies" aria-hidden="true">
+        <Pixel name="apple" size={5} className="float f1" />
+        <Pixel name="robot" size={5} className="float f2" />
+        <Pixel name="die" size={5} className="float f3" />
+        <Pixel name="laptop" size={5} className="float f4" />
+      </div>
+      <div className="grass" aria-hidden="true" />
     </section>
   )
 }
 
-function Section({ id, title, children }) {
+function Section({ id, title, icon, color = 'mint', children }) {
   return (
-    <section id={id} className="section">
-      <h2>{title}</h2>
+    <section id={id} className={`section tone-${color}`}>
+      <h2>
+        {icon && <Pixel name={icon} size={4} className="h-icon" />}
+        <span className="h-text">{title}</span>
+      </h2>
       {children}
     </section>
   )
@@ -95,7 +112,7 @@ function Experience() {
   const groups = ['All', ...experience.map((g) => g.group)]
   const shown = tab === 'All' ? experience : experience.filter((g) => g.group === tab)
   return (
-    <Section id="experience" title="Experience">
+    <Section id="experience" title="Experience" icon="apple" color="coral">
       <div className="tabs" role="tablist">
         {groups.map((g) => (
           <button
@@ -112,7 +129,9 @@ function Experience() {
       </div>
       {shown.map((g) => (
         <div key={g.group} className="exp-group">
-          <h3 className="group-title">{g.group}</h3>
+          <h3 className="group-title">
+            <Pixel name={g.group === 'Teaching' ? 'pencil' : 'laptop'} size={2} /> {g.group}
+          </h3>
           <ol className="timeline">
             {g.items.map((item) => (
               <li key={item.title + item.dates} className={item.current ? 'current' : ''}>
@@ -145,18 +164,20 @@ function Experience() {
 
 function Projects() {
   return (
-    <Section id="projects" title="Projects">
+    <Section id="projects" title="Projects" icon="laptop" color="sky">
       <div className="cards">
-        {projects.map((p) => {
+        {projects.map((p, i) => {
           const Tag = p.href ? 'a' : 'div'
           return (
             <Tag
               key={p.name}
-              className="card"
+              className={`card card-${i % 4}`}
               {...(p.href ? { href: p.href, target: '_blank', rel: 'noreferrer' } : {})}
             >
               <div className="card-head">
-                <h4>{p.name}</h4>
+                <h4>
+                  <Pixel name={p.icon || 'star'} size={3} /> {p.name}
+                </h4>
                 {p.href && <span className="arrow" aria-hidden="true">↗</span>}
               </div>
               <p className="dates small">{p.dates}</p>
@@ -180,14 +201,14 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <Section id="about" title="About">
+        <Section id="about" title="About" icon="heart" color="pink">
           {about.map((p) => (
             <p key={p.slice(0, 24)} className="prose">{p}</p>
           ))}
         </Section>
         <Experience />
         <Projects />
-        <Section id="skills" title="Skills">
+        <Section id="skills" title="Skills" icon="star" color="sun">
           <dl className="skills">
             {skills.map((s) => (
               <div key={s.group}>
@@ -203,7 +224,7 @@ export default function App() {
             ))}
           </dl>
         </Section>
-        <Section id="education" title="Education">
+        <Section id="education" title="Education" icon="cap" color="lavender">
           {education.map((e) => (
             <div key={e.school} className="exp-head edu">
               <div>
@@ -219,7 +240,14 @@ export default function App() {
         </Section>
       </main>
       <footer className="footer">
-        © {new Date().getFullYear()} {profile.name} ·{' '}
+        <div className="footer-sprites" aria-hidden="true">
+          <Pixel name="heart" size={3} />
+          <Pixel name="apple" size={3} />
+          <Pixel name="robot" size={3} />
+          <Pixel name="die" size={3} />
+          <Pixel name="star" size={3} />
+        </div>
+        Made with curiosity · © {new Date().getFullYear()} {profile.name} ·{' '}
         <a href="https://github.com/andrew-wzj/reactportfolio" target="_blank" rel="noreferrer">
           Source
         </a>

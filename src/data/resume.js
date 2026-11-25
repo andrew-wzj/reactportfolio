@@ -101,6 +101,7 @@ export const experience = [
 export const projects = [
   {
     name: 'grpc-jobworker',
+    icon: 'laptop',
     dates: 'Mar 2025 – Jul 2025',
     summary:
       'A lightweight, open-source distributed job management system. It has a Go backend with gRPC and REST APIs for submitting, monitoring and stopping jobs, and it handles 100+ concurrent tasks. A web dashboard tracks jobs and shows logs in real time.',
@@ -109,6 +110,7 @@ export const projects = [
   },
   {
     name: 'Housing Lottery Platform',
+    icon: 'heart',
     dates: '2023 – 2024',
     summary:
       'A full-stack platform that automates the college housing assignment workflow for administrators and students.',
@@ -116,10 +118,19 @@ export const projects = [
   },
   {
     name: 'Thinking with Information & AI',
+    icon: 'robot',
     dates: 'Fall 2026',
     summary:
       'A 12-session STEM Club unit for high schoolers. Students test viral claims, compare their own plans with AI-generated ones, find hidden mistakes in AI answers and decide which steps should stay human.',
     tags: ['Curriculum', 'AI literacy', 'Project-based'],
+  },
+  {
+    name: 'Board Game Design Lab',
+    icon: 'die',
+    dates: '2026',
+    summary:
+      'A STEM Club project where students design their own board games, then playtest and revise them. They practice rules-as-systems thinking, probability and giving feedback to each other.',
+    tags: ['Game design', 'Probability', 'Playtesting'],
   },
 ]
 
