@@ -42,7 +42,7 @@ export default function TravelMap() {
     <Section id="map" title="Explored" icon="map" color="mint" className="no-print">
       <div className="map-head">
         <p className="prose">
-          Home is <strong>{travel.home.place}</strong>; I graduated in Massachusetts. Every state I explore lights up here.
+          I teach at <strong>{travel.home.place}</strong> and graduated in Massachusetts. Every state I explore lights up here.
         </p>
         <div className="map-score" aria-label={`${count} of ${total} states explored`}>
           <span className="map-count">{count}</span>
@@ -67,7 +67,7 @@ export default function TravelMap() {
               <title>{`${s.name}${visited.has(s.abbr) ? ' · explored' : ''}`}</title>
             </path>
           ))}
-          <Callout at={DUBLIN_NH} box={[742, 92]} width={104} sprite="house" text="HOME" />
+          <Callout at={DUBLIN_NH} box={[742, 92]} width={104} sprite={travel.home.sprite} text={travel.home.label} />
           <Callout at={WENHAM_MA} box={[742, 40]} width={116} sprite="cap" text={travel.college.label} />
           <Callout at={STATES.find((s) => s.abbr === travel.firstStop.abbr).c} box={[420, 26]} width={152} sprite="plane" text={travel.firstStop.label} />
         </svg>
@@ -76,7 +76,7 @@ export default function TravelMap() {
             <>
               <strong>{shown.name}</strong>{' '}
               {shown.abbr === travel.home.abbr
-                ? `· home 🏠 (${travel.home.place})`
+                ? `· explored ✓ · where I teach now 🍎 (${travel.home.place})`
                 : shown.abbr === travel.college.abbr
                   ? `· explored ✓ · graduated from ${travel.college.place} 🎓`
                   : shown.abbr === travel.firstStop.abbr
@@ -94,7 +94,7 @@ export default function TravelMap() {
       <ul className="tags map-list">
         {visitedStates.map((s) => (
           <li key={s.abbr}>
-            {s.abbr === travel.home.abbr && <Pixel name="house" size={2} />}
+            {s.abbr === travel.home.abbr && <Pixel name={travel.home.sprite} size={2} />}
             {s.abbr === travel.college.abbr && <Pixel name="cap" size={2} />}
             {s.abbr === travel.firstStop.abbr && <Pixel name="plane" size={2} />} {s.name}
           </li>
