@@ -8,7 +8,7 @@ export const profile = {
     'Mathematics educator and software engineer. B.S. in Computer Science and Mathematics, Gordon College.',
   location: 'New Hampshire, USA',
   links: [
-    { label: 'Email', href: 'mailto:aj0726zjw@gmail.com', text: 'aj0726zjw@gmail.com' },
+    { label: 'Email', href: 'mailto:zw0726ang@gmail.com', text: 'zw0726ang@gmail.com' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/wonderjie', text: 'in/wonderjie' },
     { label: 'GitHub', href: 'https://github.com/andrew-wzj', text: 'andrew-wzj' },
   ],
