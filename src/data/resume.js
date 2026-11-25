@@ -114,10 +114,10 @@ export const projects = [
   {
     name: 'grpc-jobworker',
     icon: 'laptop',
-    dates: 'Mar 2025 – Jul 2025',
+    dates: 'Mar 2025 – Jul 2025 · Rewritten Nov 2026',
     summary:
-      'A lightweight, open-source distributed job management system. It has a Go backend with gRPC and REST APIs for submitting, monitoring and stopping jobs, and it handles 100+ concurrent tasks. A web dashboard tracks jobs and shows logs in real time.',
-    tags: ['Go', 'gRPC', 'REST', 'SQLite', 'JavaScript'],
+      'An open-source job runner in Go with gRPC and REST APIs, a CLI and a web dashboard. It streams job output live, caps how many jobs run at once (tested with 100), stops whole process trees and secures the API with mutual TLS and tokens.',
+    tags: ['Go', 'gRPC', 'REST', 'mTLS', 'SQLite', 'CI'],
     href: 'https://github.com/andrew-wzj/grpc-jobworker',
   },
   {
