@@ -458,7 +458,23 @@ a.card:hover { transform: translate(-3px, -3px); box-shadow: 7px 7px 0 var(--ink
   .section { padding: 12px 0 0; }
   .h-text { font-size: 17px; border: 0; box-shadow: none; padding: 0; background: none; }
   .section h2 { margin-bottom: 8px; }
-  body { font-size: 11.5px; line-height: 1.4; }
+  body { font-size: 10.5px; line-height: 1.35; }
+  @page { margin: 0.5in 0.55in; }
+  .prose { font-size: 10.5px; margin-bottom: 6px; max-width: none; }
+  .exp-head h4, .card-head h4, .edu h4 { font-size: 12px; }
+  .org, .dates { font-size: 10.5px; }
+  .group-title { font-size: 12px; margin: 4px 0 6px; }
+  .exp-group + .exp-group { margin-top: 8px; }
+  .bullets { margin-top: 3px; }
+  .bullets li { margin-bottom: 1px; padding-left: 12px; }
+  .bullets li::before { width: 4px; height: 4px; }
+  .card p { font-size: 10.5px; margin: 0 0 3px; }
+  .dates.small { margin: 0; font-size: 10px; }
+  .skills { gap: 2px; }
+  .skills > div { grid-template-columns: 130px 1fr; padding: 0; }
+  .skills dt { font-size: 11px; }
+  .tags li { font-size: 10.5px; }
+  .links a, .loc, .link-label { font-size: 10.5px; }
   .timeline { background: none; padding: 0; }
   .timeline > li, .card, .skills > div, .edu { border: 0; box-shadow: none; padding: 0 0 8px; background: none !important; break-inside: avoid; }
   .timeline > li::before, .badge { display: none; }

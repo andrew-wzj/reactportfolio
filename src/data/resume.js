@@ -5,7 +5,7 @@ export const profile = {
   nameZh: '王志杰',
   role: 'Educator & Software Engineer',
   tagline:
-    'I teach math, run a STEM club, and build software, and I help students learn to think for themselves while AI is everywhere.',
+    'Mathematics educator and software engineer. B.S. in Computer Science and Mathematics, Gordon College.',
   location: 'New Hampshire, USA',
   links: [
     { label: 'Email', href: 'mailto:aj0726zjw@gmail.com', text: 'aj0726zjw@gmail.com' },
@@ -15,8 +15,8 @@ export const profile = {
 }
 
 export const about = [
-  'I studied Computer Science and Mathematics at Gordon College, and I now teach full time. At Dublin Christian Academy I teach Calculus and Algebra II to seniors, coach SAT Math, and lead a STEM club where students learn about AI and design board games.',
-  'Before teaching full time, I built full-stack and backend systems, from a college housing lottery platform to an open-source job scheduler written in Go. Coding and teaching have the same core for me: break a hard problem into steps someone can actually take, and stay with them while they work through it.',
+  'I graduated from Gordon College in December 2024 with a B.S. in Computer Science and Mathematics (double major). Since January 2026, I have served in Academic Support at Dublin Christian Academy, where I teach Calculus and Algebra II to 12th-grade students, provide SAT Math preparation, and lead the STEM Club.',
+  'My engineering experience covers full-stack and backend development, including an automated housing lottery platform for Gordon College and grpc-jobworker, an open-source job management system written in Go. In both teaching and engineering, I take the same approach: break complex problems into clear, achievable steps and support people as they work through them.',
 ]
 
 export const experience = [
@@ -24,16 +24,16 @@ export const experience = [
     group: 'Teaching',
     items: [
       {
-        title: 'Academic Support · Math Teacher',
+        title: 'Academic Support · Mathematics',
         org: 'Dublin Christian Academy',
         place: 'Dublin, NH',
         dates: 'Jan 2026 – Present',
         current: true,
         bullets: [
           'Teach Calculus and Algebra II to 12th-grade students.',
-          'Coach SAT Math preparation, focusing on test strategy and conceptual fluency.',
-          'Lead the STEM Club. Units include "Thinking with Information & AI", where students verify claims, test AI output and decide which thinking should stay their own, and board game design and playtesting.',
-          'Lead conversations with students and faculty about how learning and teaching change in the age of AI.',
+          'Provide SAT Math preparation covering core concepts and test-taking strategy.',
+          'Lead the STEM Club and design project-based units on AI literacy (evaluating sources, verifying AI output and deciding when to rely on AI) and on board game design and playtesting.',
+          'Facilitate discussions with students and faculty on adapting learning and teaching practices to the AI era.',
         ],
       },
       {
@@ -43,8 +43,8 @@ export const experience = [
         dates: 'Sep 2022 – May 2025',
         bullets: [
           'Designed and taught bi-weekly online lessons for upper-primary and middle school students.',
-          'Used visuals and stories to build interest in mathematical thinking and real-life economics.',
-          'Built student confidence and promoted digital equity through patient, encouraging instruction.',
+          'Used visual models and real-world examples to teach mathematical reasoning and basic economics.',
+          'Supported student confidence and access to learning through consistent, encouraging instruction.',
         ],
       },
       {
@@ -90,7 +90,7 @@ export const experience = [
         place: 'Wenham, MA',
         dates: 'Sep 2022 – May 2024',
         bullets: [
-          'Wrote beginner guides and Scratch labs for STEM Day, introducing 50–100 elementary students to computing each year.',
+          'Wrote beginner guides and Scratch labs for the annual STEM Day, introducing 50–100 elementary students to computing each year.',
           'Represented Gordon at the Air Force Cyber Challenge 2022: analyzed network traffic in Wireshark and resolved 4 vulnerabilities.',
         ],
       },
@@ -121,7 +121,7 @@ export const projects = [
     icon: 'robot',
     dates: 'Fall 2026',
     summary:
-      'A 12-session STEM Club unit for high schoolers. Students test viral claims, compare their own plans with AI-generated ones, find hidden mistakes in AI answers and decide which steps should stay human.',
+      'A 12-session STEM Club unit for high school students. Students verify viral claims, compare their own plans with AI-generated plans, identify errors in AI output and decide which tasks should remain human.',
     tags: ['Curriculum', 'AI literacy', 'Project-based'],
   },
   {
@@ -129,7 +129,7 @@ export const projects = [
     icon: 'die',
     dates: '2026',
     summary:
-      'A STEM Club project where students design their own board games, then playtest and revise them. They practice rules-as-systems thinking, probability and giving feedback to each other.',
+      'A STEM Club project in which students design, playtest and revise original board games, applying systems thinking and probability and practicing structured peer feedback.',
     tags: ['Game design', 'Probability', 'Playtesting'],
   },
 ]
