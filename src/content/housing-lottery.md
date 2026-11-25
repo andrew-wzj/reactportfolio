@@ -11,7 +11,7 @@ interface "clean," "professional," and "consistent with 360." We shipped a stude
 application form and an administrator table with CSV export, both inside the college's
 Gordon 360 portal.
 
-The app never decided who lives where.
+The app we delivered never decided who lives where.
 
 This case study goes back to the question we skipped. I redefine the problem, write down
 the rules, design an assignment algorithm, and test the rules on 1,000 simulated
@@ -51,10 +51,11 @@ another without their knowledge.
 
 ## What we missed
 
-The fourth need, the algorithm, was only partly built. Each application got a random
-lottery number, but nothing in the app ordered students by class year or placed anyone in
-a hall. The assignment itself still happened by hand, starting from the CSV file we
-exported.
+The fourth need, the algorithm, was only partly built. The code we prepared for Gordon 360
+gave each application a random lottery number, but it did not order students by class
+year or place anyone in a hall. In our final demo we showed a simulated automatic
+assignment, but it never became part of the real process: the assignment itself still
+happened by hand, starting from the CSV file we exported.
 
 One reviewer at our December demo said it plainly: *"For the admin interface, if possible
 the team could implement an algorithm that does the room assignments, maybe based on

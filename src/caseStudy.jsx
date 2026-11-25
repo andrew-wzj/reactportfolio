@@ -17,7 +17,7 @@ const html = marked
 function CaseStudy() {
   const toggleTheme = useTheme()
   useEffect(() => {
-    for (const img of document.querySelectorAll('.prose img')) {
+    for (const img of document.querySelectorAll('.case-prose img')) {
       img.loading = 'lazy'
       img.decoding = 'async'
     }
@@ -39,7 +39,7 @@ function CaseStudy() {
         <div className="case-badge">
           <Pixel name="heart" size={3} /> <span>Case study</span>
         </div>
-        <article className="prose" dangerouslySetInnerHTML={{ __html: html }} />
+        <article className="case-prose" dangerouslySetInnerHTML={{ __html: html }} />
       </main>
       <footer className="footer">
         <div className="footer-sprites" aria-hidden="true">

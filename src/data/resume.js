@@ -16,7 +16,7 @@ export const profile = {
 
 export const about = [
   'I graduated from Gordon College in December 2024 with a B.S. in Computer Science and Mathematics (double major). Since January 2026, I have served in Academic Support at Dublin Christian Academy, where I teach Calculus and Algebra II to 12th-grade students, provide SAT Math preparation, and lead the STEM Club. I also teach science on the iFe Life Aesthetics teaching team, where I hosted a minisymposium on learning in the AI era.',
-  'My engineering experience covers full-stack and backend development, including an automated housing lottery platform for Gordon College and grpc-jobworker, an open-source job management system written in Go. In both teaching and engineering, I take the same approach: break complex problems into clear, achievable steps and support people as they work through them.',
+  'My engineering experience covers full-stack and backend development, including a housing lottery platform for Gordon College and grpc-jobworker, an open-source job management system written in Go. In both teaching and engineering, I take the same approach: break complex problems into clear, achievable steps and support people as they work through them.',
 ]
 
 export const experience = [
@@ -75,14 +75,14 @@ export const experience = [
     group: 'Engineering',
     items: [
       {
-        title: 'Senior Capstone · Automated Housing Lottery System',
+        title: 'Senior Capstone · Housing Lottery System',
         org: 'Gordon College',
         place: 'Wenham, MA',
         dates: 'Sep 2023 – May 2024',
         bullets: [
-          'Worked with the housing office to replace a manual assignment workflow with a full-stack platform (React, Node.js, C#, PostgreSQL).',
+          'Moved the housing office\'s manual lottery into the Gordon 360 portal (React, C#); demonstrated a simulated automatic room assignment.',
           'Built data parsing and CSV export tools for administrators, cutting manual processing time by 50%.',
-          'Resolved integration and deployment issues for a stable pilot used by 200+ students.',
+          'Resolved integration and deployment issues for a stable pilot (50–100 applications per preview round, 200+ in total).',
         ],
       },
       {
@@ -125,7 +125,7 @@ export const projects = [
     icon: 'heart',
     dates: '2023 – 2024 · Revisited Nov 2026',
     summary:
-      'A housing lottery application for Gordon College Residence Life, built into the Gordon 360 portal: a student application form and an admin table with CSV export. Revisited in 2026: I designed fair assignment rules and a strategy-proof algorithm, then tested them on 1,000 simulated lotteries. Read the case study.',
+      'A housing lottery app in Gordon College\'s Gordon 360 portal: student form, admin table, CSV export. Revisited in 2026 with fair assignment rules, a strategy-proof algorithm and 1,000 simulated lotteries.',
     tags: ['React', 'C#', 'Python', 'Simulation'],
     href: 'housing-lottery/',
   },
