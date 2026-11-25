@@ -18,6 +18,19 @@ const PALETTE = {
 }
 
 export const SPRITES = {
+  gavel: [
+    '..KKKKKKKK..',
+    '.KNNNNNNNNK.',
+    '.KOOOOOOOOK.',
+    '.KNNNNNNNNK.',
+    '..KKKKKKKK..',
+    '.....KNK....',
+    '.....KNK....',
+    '.....KNK....',
+    '.KKKKKKKKKK.',
+    'KYYYYYYYYYYK',
+    'KKKKKKKKKKKK',
+  ],
   apple: [
     '......N.....',
     '.....NDD....',

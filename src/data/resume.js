@@ -16,7 +16,7 @@ export const profile = {
 
 export const about = [
   'I graduated from Gordon College in December 2024 with a B.S. in Computer Science and Mathematics (double major). Since January 2026, I have served in Academic Support at Dublin Christian Academy, where I teach Calculus and Algebra II to 12th-grade students, provide SAT Math preparation, and lead the STEM Club. I also teach science on the iFe Life Aesthetics teaching team, where I hosted a minisymposium on learning in the AI era.',
-  'My engineering experience covers full-stack and backend development, including a housing lottery platform for Gordon College and grpc-jobworker, an open-source job management system written in Go. In both teaching and engineering, I take the same approach: break complex problems into clear, achievable steps and support people as they work through them.',
+  'My engineering experience covers full-stack and backend development, including a housing lottery platform for Gordon College, grpc-jobworker (an open-source job system in Go) and a real-time classroom auction game in C#. In both teaching and engineering, I take the same approach: break complex problems into clear, achievable steps and support people as they work through them.',
 ]
 
 export const experience = [
@@ -112,6 +112,15 @@ export const experience = [
 
 export const projects = [
   {
+    name: 'Going, Going, Gone! Live',
+    icon: 'gavel',
+    dates: 'Nov 2026',
+    summary:
+      'A real-time auction for the art board game I use in class: the teacher runs it on the projector and students bid from their phones, which show what each lot is worth to them. Server-authoritative logic, bots, 15 xUnit tests, Docker deploy.',
+    tags: ['C#', 'ASP.NET Core', 'SignalR', 'Docker', 'xUnit'],
+    href: 'https://going-going-gone-live.onrender.com',
+  },
+  {
     name: 'grpc-jobworker',
     icon: 'laptop',
     dates: 'Mar 2025 – Jul 2025 · Rewritten Nov 2026',
@@ -150,7 +159,7 @@ export const projects = [
 export const skills = [
   { group: 'Teaching', items: ['Calculus', 'Algebra II', 'SAT Math', 'ESL / IELTS', 'Curriculum design', 'AI literacy'] },
   { group: 'Languages', items: ['Go', 'Python', 'Java', 'C++', 'C#', 'JavaScript', 'SQL'] },
-  { group: 'Frameworks & Tools', items: ['React', 'Node.js', 'gRPC', 'REST', 'Docker', 'Git', 'Shell'] },
+  { group: 'Frameworks & Tools', items: ['React', 'ASP.NET Core', 'SignalR', 'Node.js', 'gRPC', 'REST', 'Docker', 'Git', 'Shell'] },
   { group: 'Data', items: ['PostgreSQL', 'SQLite'] },
   { group: 'Spoken', items: ['English', 'Mandarin Chinese'] },
 ]
