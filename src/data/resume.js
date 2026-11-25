@@ -81,7 +81,7 @@ export const experience = [
         dates: 'Sep 2023 – May 2024',
         bullets: [
           'Moved the housing office\'s manual lottery into the Gordon 360 portal (React, C#); demonstrated a simulated automatic room assignment.',
-          'Built data parsing and CSV export tools for administrators, cutting manual processing time by 50%.',
+          'Built data parsing and CSV export tools for administrators.',
           'Resolved integration and deployment issues for a stable pilot (50–100 applications per preview round, 200+ in total).',
         ],
       },
