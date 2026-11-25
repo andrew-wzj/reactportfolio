@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { profile, about, experience, projects, skills, education } from './data/resume.js'
 import Pixel from './PixelArt.jsx'
 import TravelMap from './TravelMap.jsx'
+import { Landscape, Stars } from './Scenery.jsx'
+import { Particles, PLACE, SeasonSwitcher, seasonNow, useLiveWeather } from './Seasons.jsx'
 
 const SECTIONS = [
   ['about', 'About'],
@@ -62,13 +64,43 @@ function Header() {
 }
 
 function Hero() {
+  const live = useLiveWeather()
+  // ?season=winter&weather=snow previews any combo (handy for testing)
+  const params = new URLSearchParams(window.location.search)
+  const forcedWeather = params.get('weather')
+  const weather = forcedWeather ? { ...live, kind: forcedWeather, intensity: 2 } : live
+  const liveSeason = seasonNow()
+  const [preview, setPreview] = useState(() => {
+    const p = params.get('season')
+    return ['spring', 'summer', 'autumn', 'winter'].includes(p) ? p : null
+  }) // null = live
+  const season = preview || liveSeason
+  const sceneWeather = preview && !forcedWeather ? null : weather
   return (
-    <section className="hero" id="top">
+    <section
+      className="hero"
+      id="top"
+      data-season={season}
+      data-weather={sceneWeather?.kind || 'clear'}
+    >
       <div className="sky" aria-hidden="true">
-        <Pixel name="sun" size={7} className="sun" />
+        <Stars />
+        <span className="celestial sun-wrap">
+          <Pixel name="sun" size={7} className="sun" />
+        </span>
+        <span className="celestial moon-wrap">
+          <Pixel name="moon" size={6} className="moon" />
+        </span>
         <Pixel name="cloud" size={5} className="cloud c1" />
         <Pixel name="cloud" size={4} className="cloud c2" />
         <Pixel name="cloud" size={3} className="cloud c3" />
+        <Pixel name="cloud" size={6} className="cloud c4 extra" />
+        <Pixel name="cloud" size={4} className="cloud c5 extra" />
+        <Pixel name="cloud" size={5} className="cloud c6 extra" />
+        <span className="weather-tint" />
+        <Landscape />
+        <span className="fog" />
+        <Particles season={season} weather={sceneWeather} />
       </div>
       <p className="eyebrow">{profile.role}</p>
       <h1>
@@ -84,7 +116,15 @@ function Hero() {
             </a>
           </li>
         ))}
-        <li className="loc">📍 {profile.location}</li>
+        <li className="loc">
+          📍 {profile.location}
+          {live && (
+            <span className="now" title={`Live weather in ${PLACE.name}`}>
+              {' · '}
+              {live.icon} {live.f}°F ({live.c}°C) · {live.label}
+            </span>
+          )}
+        </li>
       </ul>
       <div className="buddies" aria-hidden="true">
         <Pixel name="apple" size={5} className="float f1" />
@@ -93,6 +133,7 @@ function Hero() {
         <Pixel name="laptop" size={5} className="float f4" />
       </div>
       <div className="grass" aria-hidden="true" />
+      <SeasonSwitcher live={liveSeason} value={preview} onChange={setPreview} />
     </section>
   )
 }

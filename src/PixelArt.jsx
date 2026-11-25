@@ -15,6 +15,9 @@ export const PALETTE = {
   L: '#e9ecf5', // light gray
   V: '#9b8cff', // lavender
   C: '#3dd6d0', // cyan
+  M: '#fff1a8', // moonlight
+  m: '#e3c25e', // moon shade / craters
+  S: '#fff6c8', // starlight
 }
 
 export const SPRITES = {
@@ -164,6 +167,58 @@ export const SPRITES = {
     '..Y.....Y..',
     '.....Y.....',
   ],
+  moon: [
+    '.....MMm......',
+    '...MMMm.......',
+    '..MMMm........',
+    '.MMMMm........',
+    '.MMmMm........',
+    'MMMMm.........',
+    'MMMMm.........',
+    'MmmMm.........',
+    'MMMMMm........',
+    '.MMMMMm.......',
+    '.MMMMMMm....m.',
+    '..MMMMmMmmmm..',
+    '...MMMMMMMM...',
+    '.....MMMM.....',
+  ],
+  sparkle: [
+    '...S...',
+    '...S...',
+    '..SSS..',
+    'SSSWSSS',
+    '..SSS..',
+    '...S...',
+    '...S...',
+  ],
+  blossom: [
+    '..P.P..',
+    '.PPPPP.',
+    'PPPPPPP',
+    '.PPYPP.',
+    'PPPPPPP',
+    '.PPPPP.',
+    '..P.P..',
+  ],
+  leaf: [
+    '....OOO',
+    '..OOOYO',
+    '.OOOYOO',
+    'ROOYOOO',
+    'RRYOOO.',
+    'RNRRO..',
+    'N......',
+  ],
+  snowflake: [
+    '...B...',
+    '.B.W.B.',
+    '..WWW..',
+    'BWWBWWB',
+    '..WWW..',
+    '.B.W.B.',
+    '...B...',
+  ],
   pencil: [
     '..........PP',
     '.........PPK',
@@ -179,7 +234,7 @@ export const SPRITES = {
   ],
 }
 
-export default function Pixel({ name, size = 4, className = '', title }) {
+export default function Pixel({ name, size = 4, className = '', title, style }) {
   const rows = SPRITES[name]
   if (!rows) return null
   const w = Math.max(...rows.map((r) => r.length))
@@ -198,6 +253,7 @@ export default function Pixel({ name, size = 4, className = '', title }) {
       width={w * size}
       height={h * size}
       shapeRendering="crispEdges"
+      style={style}
       role={title ? 'img' : undefined}
       aria-hidden={title ? undefined : true}
       aria-label={title}
