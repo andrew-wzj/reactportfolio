@@ -121,12 +121,13 @@ export const projects = [
     href: 'https://github.com/andrew-wzj/grpc-jobworker',
   },
   {
-    name: 'Housing Lottery Platform',
+    name: 'Housing Lottery',
     icon: 'heart',
-    dates: '2023 – 2024',
+    dates: '2023 – 2024 · Revisited Nov 2026',
     summary:
-      'A full-stack platform that automates the college housing assignment workflow for administrators and students.',
-    tags: ['React', 'Node.js', 'C#', 'PostgreSQL'],
+      'A housing lottery application for Gordon College Residence Life, built into the Gordon 360 portal: a student application form and an admin table with CSV export. Revisited in 2026: I designed fair assignment rules and a strategy-proof algorithm, then tested them on 1,000 simulated lotteries. Read the case study.',
+    tags: ['React', 'C#', 'Python', 'Simulation'],
+    href: 'housing-lottery/',
   },
   {
     name: 'Thinking with Information & AI',

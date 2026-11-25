@@ -10,7 +10,7 @@ const SECTIONS = [
   ['education', 'Education'],
 ]
 
-function useTheme() {
+export function useTheme() {
   const [theme, setTheme] = useState(() => {
     try {
       return localStorage.getItem('theme') || null
@@ -172,7 +172,11 @@ function Projects() {
             <Tag
               key={p.name}
               className={`card card-${i % 4}`}
-              {...(p.href ? { href: p.href, target: '_blank', rel: 'noreferrer' } : {})}
+              {...(p.href
+                ? p.href.startsWith('http')
+                  ? { href: p.href, target: '_blank', rel: 'noreferrer' }
+                  : { href: p.href }
+                : {})}
             >
               <div className="card-head">
                 <h4>
