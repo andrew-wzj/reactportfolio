@@ -15,7 +15,7 @@ export const profile = {
 }
 
 export const about = [
-  'I graduated from Gordon College in December 2024 with a B.S. in Computer Science and Mathematics (double major). Since January 2026, I have served in Academic Support at Dublin Christian Academy, where I teach Calculus and Algebra II to 12th-grade students, provide SAT Math preparation, and lead the STEM Club.',
+  'I graduated from Gordon College in December 2024 with a B.S. in Computer Science and Mathematics (double major). Since January 2026, I have served in Academic Support at Dublin Christian Academy, where I teach Calculus and Algebra II to 12th-grade students, provide SAT Math preparation, and lead the STEM Club. I also teach STEM on the iFe Life Aesthetics teaching team and help organize its symposia on learning in the AI era.',
   'My engineering experience covers full-stack and backend development, including an automated housing lottery platform for Gordon College and grpc-jobworker, an open-source job management system written in Go. In both teaching and engineering, I take the same approach: break complex problems into clear, achievable steps and support people as they work through them.',
 ]
 
@@ -34,6 +34,18 @@ export const experience = [
           'Provide SAT Math preparation covering core concepts and test-taking strategy.',
           'Lead the STEM Club and design project-based units on AI literacy (evaluating sources, verifying AI output and deciding when to rely on AI) and on board game design and playtesting.',
           'Facilitate discussions with students and faculty on adapting learning and teaching practices to the AI era.',
+        ],
+      },
+      {
+        title: 'STEM Teacher · Teaching Team',
+        org: 'iFe Life Aesthetics (iFe 生命美学)',
+        place: 'Remote',
+        dates: 'Dec 2025 – Present',
+        current: true,
+        bullets: [
+          'Teach STEM within iFe\'s student-centered "Discover, Develop, Display" framework, which helps each student identify and build on individual strengths.',
+          'Co-organized "HI-AI: Unseen to Pattern" (Nov 2026), a 90-minute bilingual online symposium. Opened the session, served as Zoom co-host and technical lead, and facilitated a breakout discussion group.',
+          'Designed the interactive segment "Would You Trust a Robot With Your Wallet?", with bilingual polls on AI financial advice, data privacy and AI IPOs.',
         ],
       },
       {
