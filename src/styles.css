@@ -92,7 +92,7 @@ a:hover { text-decoration: underline; text-decoration-thickness: 2px; }
 h1, h2, h3, h4 { margin: 0; line-height: 1.25; }
 .pixel { image-rendering: pixelated; flex-shrink: 0; }
 
-.pixel-font { font-family: 'Pixelify Sans', 'Nunito', monospace; }
+.pixel-font { font-family: 'Jersey 10', 'Nunito', monospace; }
 
 /* ---------- Top bar ---------- */
 .topbar {
@@ -111,9 +111,9 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.25; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Pixelify Sans', monospace;
-  font-weight: 700;
-  font-size: 22px;
+  font-family: 'Jersey 10', monospace;
+  font-weight: 400;
+  font-size: 30px;
   color: var(--text);
 }
 .brand:hover { text-decoration: none; }
@@ -191,16 +191,18 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 16px; }
   padding: 4px 12px;
   background: var(--sun);
   color: #2b2d42;
-  font-family: 'Pixelify Sans', monospace;
-  font-weight: 600;
-  font-size: 15px;
+  font-family: 'Jersey 10', monospace;
+  font-weight: 400;
+  font-size: 21px;
+  letter-spacing: 0.03em;
   border: 2px solid var(--ink);
   box-shadow: 3px 3px 0 var(--ink);
 }
 .hero h1 {
-  font-family: 'Pixelify Sans', monospace;
-  font-size: clamp(44px, 8vw, 76px);
-  font-weight: 700;
+  font-family: 'Jersey 10', monospace;
+  font-size: clamp(60px, 11vw, 100px);
+  font-weight: 400;
+  line-height: 1;
   letter-spacing: 0.01em;
   color: var(--text);
   text-shadow: 4px 4px 0 var(--pink-soft);
@@ -238,10 +240,11 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 16px; }
   margin-bottom: 28px;
 }
 .h-text {
-  font-family: 'Pixelify Sans', monospace;
-  font-size: 30px;
-  font-weight: 700;
-  padding: 2px 14px;
+  font-family: 'Jersey 10', monospace;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.1;
+  padding: 2px 16px;
   background: var(--tone-soft);
   border: 3px solid var(--ink);
   box-shadow: var(--shadow);
@@ -259,8 +262,9 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 16px; }
 .tabs { display: inline-flex; gap: 8px; margin-bottom: 30px; flex-wrap: wrap; }
 .tab {
   font: inherit;
-  font-family: 'Pixelify Sans', monospace;
-  font-size: 16px;
+  font-family: 'Jersey 10', monospace;
+  font-size: 22px;
+  line-height: 1.2;
   border: 2px solid var(--ink);
   background: var(--surface);
   color: var(--text);
@@ -277,8 +281,8 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 16px; }
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Pixelify Sans', monospace;
-  font-size: 18px;
+  font-family: 'Jersey 10', monospace;
+  font-size: 25px;
   color: var(--tone);
   margin-bottom: 18px;
 }
@@ -319,10 +323,11 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 16px; }
 .dates { color: var(--muted); font-size: 14px; font-weight: 700; white-space: nowrap; display: inline-flex; gap: 8px; align-items: center; font-variant-numeric: tabular-nums; }
 .dates.small { font-size: 13px; margin: 2px 0 8px; }
 .badge {
-  font-family: 'Pixelify Sans', monospace;
+  font-family: 'Jersey 10', monospace;
   background: var(--sun);
   color: #2b2d42;
-  font-size: 12px;
+  font-size: 16px;
+  line-height: 1.2;
   padding: 0 8px;
   border: 2px solid var(--ink);
 }
@@ -358,7 +363,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 16px; }
 a.card:hover { transform: translate(-3px, -3px); box-shadow: 7px 7px 0 var(--ink); text-decoration: none; }
 .card-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
 .card-head h4 { display: inline-flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 800; }
-.arrow { font-family: 'Pixelify Sans', monospace; font-size: 20px; color: var(--text); }
+.arrow { font-family: 'Jersey 10', monospace; font-size: 28px; color: var(--text); }
 
 .tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .tags li {
@@ -382,7 +387,7 @@ a.card:hover { transform: translate(-3px, -3px); box-shadow: 7px 7px 0 var(--ink
   border: 3px solid var(--ink);
   box-shadow: var(--shadow);
 }
-.skills dt { font-family: 'Pixelify Sans', monospace; font-size: 17px; }
+.skills dt { font-family: 'Jersey 10', monospace; font-size: 23px; }
 .skills dd { margin: 0; }
 .skills > div:nth-child(5n + 1) .tags li { background: var(--coral-soft); }
 .skills > div:nth-child(5n + 2) .tags li { background: var(--sky-soft); }
@@ -437,7 +442,7 @@ a.card:hover { transform: translate(-3px, -3px); box-shadow: 7px 7px 0 var(--ink
   .actions .ghost:first-child { display: none; }
   .hero { padding: 72px 0 24px; }
   .sun { width: 52px; height: auto; top: 16px; }
-  .h-text { font-size: 24px; }
+  .h-text { font-size: 32px; }
   .exp-head { flex-direction: column; gap: 4px; }
   .timeline { padding-left: 24px; }
   .timeline > li { padding: 14px 14px; }
@@ -451,19 +456,19 @@ a.card:hover { transform: translate(-3px, -3px); box-shadow: 7px 7px 0 var(--ink
   .topbar, .tabs, .footer, .arrow, .sky, .buddies, .grass, .pixel { display: none !important; }
   .hero { padding: 0 0 10px; }
   .hero::before { display: none; }
-  .hero h1 { font-size: 30px; text-shadow: none; }
+  .hero h1 { font-size: 40px; text-shadow: none; }
   .eyebrow { box-shadow: none; border: 0; padding: 0; background: none; }
   .tagline { font-size: 14px; margin: 6px 0 10px; }
   .links a { border: 0; box-shadow: none; padding: 0 10px 0 0; background: none !important; }
   .section { padding: 12px 0 0; }
-  .h-text { font-size: 17px; border: 0; box-shadow: none; padding: 0; background: none; }
+  .h-text { font-size: 22px; border: 0; box-shadow: none; padding: 0; background: none; }
   .section h2 { margin-bottom: 8px; }
   body { font-size: 10.5px; line-height: 1.35; }
   @page { margin: 0.5in 0.55in; }
   .prose { font-size: 10.5px; margin-bottom: 6px; max-width: none; }
   .exp-head h4, .card-head h4, .edu h4 { font-size: 12px; }
   .org, .dates { font-size: 10.5px; }
-  .group-title { font-size: 12px; margin: 4px 0 6px; }
+  .group-title { font-size: 16px; margin: 4px 0 6px; }
   .exp-group + .exp-group { margin-top: 8px; }
   .bullets { margin-top: 3px; }
   .bullets li { margin-bottom: 1px; padding-left: 12px; }
@@ -472,7 +477,7 @@ a.card:hover { transform: translate(-3px, -3px); box-shadow: 7px 7px 0 var(--ink
   .dates.small { margin: 0; font-size: 10px; }
   .skills { gap: 2px; }
   .skills > div { grid-template-columns: 130px 1fr; padding: 0; }
-  .skills dt { font-size: 11px; }
+  .skills dt { font-size: 15px; }
   .tags li { font-size: 10.5px; }
   .links a, .loc, .link-label { font-size: 10.5px; }
   .timeline { background: none; padding: 0; }
