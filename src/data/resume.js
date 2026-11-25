@@ -178,5 +178,5 @@ export const travel = {
   home: { abbr: 'NH', place: 'Dublin Christian Academy, Dublin, NH', label: 'WORK', sprite: 'apple' },
   college: { abbr: 'MA', place: 'Gordon College, Wenham, MA', label: "GRAD '24" },
   firstStop: { abbr: 'MN', label: 'FIRST STOP' },
-  visited: ['ME', 'NH', 'MA', 'CT', 'PA', 'UT', 'FL', 'CA', 'RI', 'NY', 'NJ', 'MN', 'MD', 'DC'],
+  visited: ['ME', 'NH', 'MA', 'CT', 'PA', 'UT', 'FL', 'CA', 'RI', 'NY', 'NJ', 'MN', 'MD', 'DC', 'VT'],
 }
