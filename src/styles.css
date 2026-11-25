@@ -533,10 +533,11 @@ a.card:hover { transform: translate(-3px, -3px); box-shadow: 7px 7px 0 var(--ink
 .us-map .state.visited { fill: var(--mint); }
 .us-map .state.visited:hover, .us-map .state.visited.focus { fill: var(--sun); }
 .us-map .state.home { fill: var(--coral); }
-.us-map .home-label rect { fill: var(--ink); }
-.us-map .home-label text { fill: #fff; font-family: 'Jersey 10', monospace; font-size: 22px; }
-.us-map .home-label path { stroke: var(--ink); stroke-width: 3; fill: none; }
-.home-pin { pointer-events: none; }
+.us-map .callout { pointer-events: none; }
+.us-map .callout path { stroke: var(--text); stroke-width: 2.5; fill: none; }
+.us-map .callout-box { fill: #fffaf0; stroke: #2b2d42; stroke-width: 2.5; }
+.us-map .callout text { fill: #2b2d42; font-family: 'Jersey 10', monospace; font-size: 22px; }
+.us-map .callout-dot { fill: var(--sun); stroke: var(--text); stroke-width: 2.5; }
 .map-info { font-size: 15px; min-height: 1.6em; margin: 6px 0 0; }
 .map-list { margin-top: 18px; }
 .map-list .pixel { vertical-align: -2px; }

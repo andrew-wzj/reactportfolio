@@ -1,7 +1,7 @@
 // Tiny pixel-art sprites drawn as crisp SVG rects.
 // Each sprite is a list of rows; each character maps to a palette color ('.' = empty).
 
-const PALETTE = {
+export const PALETTE = {
   K: '#2b2d42', // ink
   W: '#ffffff',
   R: '#ff6b6b', // coral
@@ -18,6 +18,17 @@ const PALETTE = {
 }
 
 export const SPRITES = {
+  plane: [
+    '.....KK.....',
+    '.....KBK....',
+    'K....KBBK...',
+    'KBKKKKBBBKK.',
+    'KBBBBBBBBWBK',
+    'KKKKKKBBBKK.',
+    '.....KBBK...',
+    '.....KBK....',
+    '.....KK.....',
+  ],
   house: [
     '....KK....',
     '...KRRK...',
