@@ -208,6 +208,15 @@ export default function App() {
       <main>
         <Hero />
         <Section id="about" title="About" icon="heart" color="pink">
+          <figure className="hoops">
+            <img
+              src={`${import.meta.env.BASE_URL}hoops.svg`}
+              width="800"
+              height="240"
+              alt="Pixel-art loop, 2 on 2: AJ passes to AI teammate #23, who drives through both defenders and dunks over them at the buzzer, 30 to 29"
+            />
+            <figcaption>Coding in the AI era: I call the play, my AI teammate #23 finishes at the buzzer.</figcaption>
+          </figure>
           {about.map((p) => (
             <p key={p.slice(0, 24)} className="prose">{p}</p>
           ))}
